@@ -18,6 +18,7 @@
     width: 100%;
     top: 0;
     z-index: 999;
+    
 }
 #header_logo {
     width: 222px;
@@ -252,6 +253,7 @@ body{
     margin-bottom: 35px;
     transform: skewX(340deg);
     font-weight: bold;
+    width: 160px;
 }
 #product_price span {
     font-size: 34px;
