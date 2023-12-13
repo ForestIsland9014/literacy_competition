@@ -6,6 +6,23 @@
     outline: none;
 }
 
+#myCanvas {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #fff0;
+    z-index: 5;
+}
+#head {
+    background: #004d94;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+}
+
 
 
 #bool{
@@ -24,9 +41,11 @@
     width: 222px;
 }
 footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     background: #01294c;
+    z-index: 999;
+    width: 100%;
 }
 
 aside{
@@ -38,15 +57,136 @@ aside{
 #side_bar_menu_list{
     list-style-type:none;
 }
-
-main{
+.date {
+    text-align: right;
+}
+.explanation {
+    margin-top: 30px;
+    text-align: left;
+}
+.explanation span {
+    font-weight: bold;
+}
+#content {
+    max-width: 550px;
+    width: 100%;
+    margin: 0 2%;
+}
+.content_child .item_img {
+    max-width: 165px;
+    width: 100%;
+}
+.content_child {
+    padding: 15px;
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.address_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 10px;
+    background: #454545;
+    border-radius: 99px;
+    margin: 5px;
+    width: 80%;
+    overflow: hidden;
+}
+.tab_elem {
+    display: flex;
+    width: 125px;
+    justify-content: space-around;
+    align-items: center;
+}
+.tab_elem img {
+    width: 20px;
+}
+
+#get_button {
+    background: #3ac05b;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.content_comment {
+    justify-content: flex-start;
+    background: #e8e8e8;
+}
+
+#login_form {
+    text-align: left;
+    padding: 10px;
+    margin-top: 30px;
+
+}
+#login_form h4 {
+    font-size: 23px;
+}
+#login_form input {
+    width: 97%;
+    font-size: 30px;
+    padding: 1%;
+    
+}
+.login {
+    width: 100%;
+    text-align: center;
+    background: #ee2c0b;
+    color: #fff;
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.singup {
+    width: 100%;
+    text-align: center;
+    background: #04a915;
+    color: #fff;
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.comment {
+    text-align: left;
+    margin-bottom: 20px;
+}
+main{
+    display: flex!important;
     justify-content: center;
     align-content: center;
     align-items: center;
     padding: 0;
     text-align: center;
+    flex-wrap: wrap;
 }
+
+#particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 100%;
+    height: 100%;
+    background-color:#f3f3f3;/*背景色*/
+  }
+  
+  #wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100%;
+  }
 
 st{
     color: #f00;
@@ -84,13 +224,7 @@ st{
 
 }
 
-#buy_info{
-    display: ;
-}
 
-#buy_text{
-    display: ;
-}
 #shop_info {
     text-align: left;
     margin: 0px 1.8%;
@@ -179,7 +313,40 @@ body{
 .footer_menu{
     text-align: center;
 }
-
+#control {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #000000d4;
+    display: none;
+}
+#control p {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 4px 3px black;
+}
+.control_content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.game_start {
+    background: #008be4;
+    padding: 5px 25px;
+    border-radius: 99px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.game_start p {
+    text-shadow: none!important;
+}
 .button {
     display: inline-block;
     border-radius: 5px;
@@ -193,8 +360,13 @@ body{
     transition: .3s;
     text-decoration: none;
     margin: 5px;
-    height: 14px;
+    height: 17px;
+    width: 100%;
+    max-width: 200px;
   }
+  .change_btn {
+    background: #0d8eda;
+    }
 
   .button:hover {
     box-shadow    : none;        /* カーソル時の影消去 */
@@ -264,6 +436,17 @@ body{
     
 }
 
+#ans {
+    font-size: 70px!important;
+    font-weight: bold;
+}
+#control_str {
+    width: 60%;
+    margin: 0 20%;
+    line-height: 1.5;
+}
+
+
 @media screen and (max-width: 1090px) {
 
     .menu_list:has(#header_logo) {
@@ -273,12 +456,22 @@ body{
         height: 100px;
     }
 }
+@media screen and (max-width: 830px) {
+    #control_str {
+        font-size: unset;
+    }
+}
 @media screen and (max-width: 700px) {
     .header_button {
         font-size: 15px;
         padding: 12px 0px;
         width: 97%;
     }
+    #control_str {
+        width: 95%;
+        margin: 0 5%;
+    }
+    
 }
 
 @media screen and (max-width: 700px) { 
@@ -291,6 +484,12 @@ body{
     #bool h1 {
         font-size: 19px;
         padding: 8px 0px;
+    }
+
+}
+@media screen and (max-width: 360px) { 
+    .tab_elem {
+        display: none;
     }
 }
 
